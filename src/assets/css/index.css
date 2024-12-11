@@ -1,0 +1,363 @@
+:root {
+  --main-color: #5932EA;
+  /* Tomato Red */
+  --secondary-color: #FFD700;
+  /* Bright Yellow */
+  --custom-white: #f3f3f3;
+  /* Simple White */
+  --main-fonts-color: #373738;
+  --input-color: #ebedf1;
+
+  /* font */
+  --main-font-size: 13px;
+  --main-border-radius: 8px;
+
+  --angle: 90deg;
+}
+
+@font-face {
+  font-family: 'myFont';
+  src: url('../fonts/iranyekan/IRANYekanMedium.ttf');
+  font-weight: 500;
+  /* Medium */
+}
+
+@font-face {
+  font-family: 'myFont';
+  src: url('../fonts/iranyekan/IRANYekanLight.ttf');
+  font-weight: 300;
+  /* Light */
+}
+
+@font-face {
+  font-family: 'myFont';
+  src: url('../fonts/iranyekan/IRANYekanExtraBold.ttf');
+  font-weight: 800;
+  /* ExtraBold */
+}
+
+@font-face {
+  font-family: 'myFont';
+  src: url('../fonts/iranyekan/IRANYekanBold.ttf');
+  font-weight: 700;
+  /* Bold */
+}
+
+
+body {
+  font-family: 'myFont', sans-serif;
+}
+
+h1 {
+  font-family: 'myFont', sans-serif;
+  font-weight: 800 !important; /* ExtraBold */
+}
+
+h2 {
+  font-family: 'myFont', sans-serif;
+  font-weight: 700  !important; /* Bold */
+}
+
+p {
+  font-family: 'myFont', sans-serif;
+  font-weight: 500  !important; /* Medium */
+}
+
+small {
+  font-family: 'myFont', sans-serif;
+  font-weight: 300  !important; /* Light */
+}
+
+
+html,
+body {
+  direction: rtl;
+  font-family: 'myFont', sans-serif;
+  background-color: var(--custom-white);
+  -webkit-overflow-x: hidden !important;
+  /* برای مرورگرهای Webkit */
+  -moz-overflow-x: hidden !important;
+  /* برای مرورگرهای Mozilla */
+  overflow-x: hidden !important;
+  overflow-x: hidden !important;
+  margin: 0;
+  padding: 0;
+}
+
+input,
+textarea,
+button,
+span,
+p,
+div {
+  font-family: 'myFont', sans-serif !important;
+}
+
+input[type="text"],
+input[type="number"],
+textarea {
+  padding: 0.75rem 0.75rem !important;
+  border-radius: var(--main-border-radius) !important;
+  border: 1px solid var(--input-color) !important;
+  background-color: var(--input-color) !important;
+  font-size: var(--main-font-size) !important;
+  color: var(--main-fonts-color) !important;
+  width: 100%;
+}
+
+footer {
+  color: var(--main-fonts-color);
+  font-size: 1rem;
+}
+
+
+
+/* Background color classes */
+.bg-main-color {
+  background-color: var(--main-color);
+}
+
+.bg-secondary-color {
+  background-color: var(--secondary-color);
+}
+
+.bg-accent-blue {
+  background-color: var(--accent-steelblue);
+}
+
+.bg-custom-white {
+  background-color: var(--custom-white);
+}
+
+.bg-input {
+  background-color: var(--input-color);
+}
+
+/* Text color classes */
+.text-main-color {
+  color: var(--main-color);
+}
+
+.text-secondary-color {
+  color: var(--secondary-color);
+}
+
+.text-accent-blue {
+  color: var(--accent-steelblue);
+}
+
+.text-custom-white {
+  color: var(--custom-white);
+}
+
+
+/* Custom scrollbar styles for WebKit browsers (Chrome, Safari, etc.) */
+::-webkit-scrollbar {
+  width: 10px;
+  /* Width of the scrollbar */
+}
+
+::-webkit-scrollbar-track {
+  background: #f1f1f1;
+  /* Background of the scrollbar track */
+  border-radius: 10px;
+  /* Rounded corners for the track */
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: #4682B4;
+  /* Color of the scroll thumb */
+  border-radius: 10px;
+  /* Rounded corners for the scroll thumb */
+  border: 2px solid #f1f1f1;
+  /* Adds a border to create space between the thumb and track */
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background-color: #1E90FF;
+  /* Hover state for the scroll thumb */
+}
+
+/* For Firefox, using scrollbar-width and scrollbar-color */
+* {
+  scrollbar-width: thin;
+  /* Make scrollbar thinner */
+  scrollbar-color: #4682B4 #f1f1f1;
+  /* Thumb color and track color */
+}
+
+/* custom */
+.main-layout {
+  position: relative;
+  min-height: 100%;
+  margin: auto;
+  padding: 1rem;
+}
+
+.center-page {
+  min-height: 70vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+}
+
+.main-layout>div {
+  width: 100%;
+}
+
+.date-picker .p-custom {
+  padding-right: 2rem !important;
+}
+
+/* +++++ ant +++++ */
+/* tabs */
+.ant-tabs-nav-wrap {
+  justify-content: center;
+}
+
+.ant-tabs-tab {
+  border-radius: 2rem !important;
+  margin: 0.5rem 0.2rem !important;
+}
+
+.ant-tabs-tab-active {
+  background: var(--main-color) !important;
+}
+
+.ant-tabs-tab-active>div {
+  color: var(--custom-white) !important;
+}
+
+
+/* form */
+.ant-form-item {
+  margin: 0;
+}
+
+.ant-form-item-explain-error {
+  font-size: var(--main-font-size) !important;
+  padding-bottom: 10px;
+}
+
+.ant-form-item-label>label {
+  font-size: 12px !important;
+}
+
+.ant-form-item,
+.ant-form-item-label {
+  padding-bottom: 0 !important;
+}
+
+.ant-select-selector {
+  font-size: var(--main-font-size) !important;
+  color: var(--main-fonts-color) !important;
+  background-color: var(--input-color) !important;
+  border: 1px solid var(--input-color) !important;
+  border-radius: var(--main-border-radius) !important;
+}
+
+.ant-select {
+  height: 2.9rem !important;
+}
+
+/* error */
+.ant-form-item-explain-error {
+  padding-bottom: 0;
+  font-size: 12px !important;
+}
+
+/* table */
+.ant-table-content td,
+.ant-table-content th {
+  white-space: nowrap;
+}
+
+/* stap */
+.ant-steps-item {
+  display: flex !important;
+  justify-content: center !important;
+}
+
+.ant-steps-item-content {
+  display: none !important;
+}
+
+.ant-steps-item-icon {
+  margin: 0 !important;
+}
+
+/* +++++ toast +++++ */
+.Toastify__toast {
+  font-family: 'myFont', sans-serif !important;
+}
+
+@media only screen and (max-width: 455px) {
+  .Toastify__toast {
+    width: 90%;
+    margin: 16px auto;
+    border-radius: 0.5rem !important;
+  }
+}
+
+/* radio button */
+.ant-radio-button-wrapper-checked,
+.ant-radio-button {
+  border-radius: 2rem !important;
+  background-color: var(--main-color) !important;
+  border: 0 !important;
+}
+
+.ant-radio-button-wrapper {
+  border-radius: 2rem !important;
+  border: 0 !important;
+}
+
+.ant-radio-button-wrapper::before {
+  background-color: unset !important;
+}
+
+/* table */
+.ant-table {
+  max-height: 70vh !important;
+  overflow: auto !important;
+}
+
+.ant-table-container {
+  direction: ltr !important;
+}
+
+.ant-table-content {
+  direction: rtl !important;
+}
+
+.ant-table-pagination {
+  justify-content: center !important;
+  direction: ltr !important;
+}
+
+/*  */
+.ant-menu-item-selected {
+  background-color: var(--main-color) !important;
+  color: var(--custom-white) !important;
+}
+
+
+/* +++++ ag grid +++++ */
+.ag-font {
+  font-size: 2rem !important;
+  font-family: 'myFont', sans-serif !important;
+}
+
+.ag-theme-quartz {
+  --ag-background-color: #ddd;
+  font-size: 2rem !important;
+  font-family: 'myFont', sans-serif !important;
+}
+
+.ag-theme-quartz .ag-header-cell-label .ag-charts-styles {
+  font-style: italic;
+  font-size: 2rem !important;
+  font-family: 'myFont', sans-serif !important;
+}
